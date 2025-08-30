@@ -37,7 +37,7 @@ CREATE TABLE plain_password (
 
 
 -- 创建新用户（例如用户名为 material_user，密码为 yourpassword）
-CREATE USER 'material_user'@'%' IDENTIFIED BY '@NJD^&BHkw$*46wa';
+CREATE USER 'material_user'@'%' IDENTIFIED BY '9a8d1awd8a';
 
 -- 授权该用户对 material_website 数据库的所有权限
 GRANT ALL PRIVILEGES ON material_website.* TO 'material_user'@'%';
