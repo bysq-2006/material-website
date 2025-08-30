@@ -10,7 +10,16 @@
 - 如果前后端部署在不同服务器，需要在前端 `src/home/index.ts` 文件中修改 API 请求的后端 IP 地址。
 - 前端使用 Vite 构建，相关配置在 `vite.config.ts`。
 - 后端环境变量配置在 `back-end/config.env`，可用于设置数据库连接、端口等参数。
-- 数据库初始化脚本为 `back-end/sql初始化.sql`，如需恢复数据可使用 `back-end/db_backup.js`。
+- 数据库初始化脚本为 `back-end/sql初始化.sql`。
+- `db_backup.js` 是用于备份和恢复数据库的脚本。通过该脚本可以定期导出数据库数据，防止数据丢失。
+
+### db_backup.js使用方法
+
+1. 确保已安装 Node.js 和相关依赖（如 `mysql` 模块）。
+2. 在命令行中运行 `node db_backup.js`，即可执行数据库备份操作。
+3. 可根据需要修改脚本中的数据库连接配置和备份路径。
+
+备份文件会保存为 SQL 格式，便于后续恢复或迁移数据库。
 - 静态资源存放于 `front-end/public`。
 
 ## 环境变量说明
