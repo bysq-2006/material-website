@@ -16,7 +16,6 @@ CREATE TABLE material (
   author VARCHAR(100) COMMENT '作者',
   createdAt DATETIME NOT NULL COMMENT '创建时间'
 );
-
 -- 待审核素材表
 CREATE TABLE material_pending (
   id INT PRIMARY KEY AUTO_INCREMENT COMMENT '主键',
@@ -37,7 +36,7 @@ CREATE TABLE plain_password (
 
 
 -- 创建新用户（例如用户名为 material_user，密码为 yourpassword）
-CREATE USER 'material_user'@'%' IDENTIFIED BY '9a8d1awd8a';
+CREATE USER 'material_user'@'%' IDENTIFIED BY '@#Fw15a';
 
 -- 授权该用户对 material_website 数据库的所有权限
 GRANT ALL PRIVILEGES ON material_website.* TO 'material_user'@'%';

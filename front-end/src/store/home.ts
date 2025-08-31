@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const homeStore = defineStore('classify', {
   state: () => ({
-    ip: 'localhost:3000', // 后端地址
+    ip: '47.113.146.59:3000', // 后端地址
     Materials: [] as any[], // 素材列表
     totalPages: 1, // 总页数
     classify: '全部',
