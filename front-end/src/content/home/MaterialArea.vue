@@ -2,9 +2,9 @@
   <div class="MaterialArea">
     <!-- 这里是素材展示区域的内容 -->
     <div class="material-card" v-for="item in homeStore().Materials" :key="item.id">
-      <img :src="`http://${homeStore().ip}` + item.thumbnail" alt="图片加载失败" class="display-img">
+      <img :src="item.thumbnail" alt="图片加载失败" class="display-img">
 
-      <a :href="`http://${homeStore().ip}` + '/download' + item.path" :download="item.path" class="download-link">
+      <a :href="'/download' + item.path" :download="item.path" class="download-link">
         <button class="download"></button>
       </a>
 

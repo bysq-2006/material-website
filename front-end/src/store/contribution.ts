@@ -61,7 +61,7 @@ export const contributionStore = defineStore('contribution', () => {
     formData.append('title', title.value)
     formData.append('author', author.value)
     // 这里的接口地址请根据实际情况修改
-    const res = await axios.post(`http://${homeStore().ip}/api/upload`, formData,
+    const res = await axios.post('/api/upload', formData,
       {
         onUploadProgress: (e) => {
           if (e.total) {

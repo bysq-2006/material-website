@@ -13,7 +13,7 @@ export const homeStore = defineStore('classify', {
   actions: {
     // 获取素材，并将其映射到store上，渲染界面会自动更新
     fetchMaterials() {
-      axios.get(`http://${this.ip}/api/materials`,
+      axios.get('/api/materials',
         {
           params: {
             search: this.search,
@@ -32,7 +32,7 @@ export const homeStore = defineStore('classify', {
     async fetchTotalPages() {
       const search = this.search || ''
       const classify = this.classify || ''
-      const response = await axios.get(`http://${this.ip}/api/materials/count`, { 
+      const response = await axios.get('/api/materials/count', { 
         params: { search, classify } 
       })
       return response.data.totalPages

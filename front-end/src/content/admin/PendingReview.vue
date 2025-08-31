@@ -25,7 +25,7 @@
           <div class="material-thumbnail">
             <img 
               v-if="material.thumbnail" 
-              :src="`http://${home.ip}${material.thumbnail}`" 
+              :src="material.thumbnail" 
               :alt="material.name"
               @error="handleImageError"
             />

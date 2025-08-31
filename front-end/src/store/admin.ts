@@ -13,7 +13,7 @@ export const adminStore = defineStore('admin', {
     async login(password: string) {
       const home = homeStore()
       try {
-        const response = await axios.post(`http://${home.ip}/api/login`, {
+        const response = await axios.post('/api/login', {
           password: password
         })
         if (response.data.code === 0) {
@@ -50,7 +50,7 @@ export const adminStore = defineStore('admin', {
     async fetchPendingMaterials() {
       const home = homeStore()
       try {
-        const response = await axios.get(`http://${home.ip}/api/pending`)
+        const response = await axios.get('/api/pending')
         if (response.data.code === 0) {
           this.pendingMaterials = response.data.data
         }
@@ -63,7 +63,7 @@ export const adminStore = defineStore('admin', {
     async reviewMaterial(id: number, pass: boolean) {
       const home = homeStore()
       try {
-        const response = await axios.post(`http://${home.ip}/api/review`, {
+        const response = await axios.post('/api/review', {
           id: id,
           pass: pass
         }, {
